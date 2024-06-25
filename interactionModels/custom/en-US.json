@@ -1,0 +1,87 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "amount",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "fromUnit",
+              "type": "UNIT_TYPE"
+            },
+            {
+              "name": "toUnit",
+              "type": "UNIT_TYPE"
+            }
+          ],
+          "name": "ConvertUnitsIntent",
+          "samples": [
+            "convierte {amount} {fromUnit} a {toUnit}",
+            "cuántos {toUnit} hay en {amount} {fromUnit}",
+            "convierte {amount} {fromUnit} en {toUnit}",
+            "cambia {amount} {fromUnit} a {toUnit}",
+            "transforma {amount} {fromUnit} a {toUnit}"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "cm",
+                  "centímetro"
+                ],
+                "value": "centímetros"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "m",
+                  "metro"
+                ],
+                "value": "metros"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "km",
+                  "kilómetro"
+                ],
+                "value": "kilómetros"
+              }
+            }
+          ],
+          "name": "UNIT_TYPE"
+        }
+      ],
+      "invocationName": "cahh convert unit"
+    }
+  }
+}
